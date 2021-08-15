@@ -20,13 +20,17 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Inherit some common PE stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/descendant/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_jd2019
+PRODUCT_NAME := descendant_jd2019
 PRODUCT_BRAND := lenovo
 PRODUCT_DEVICE := jd2019
 PRODUCT_MANUFACTURER := lenovo
 PRODUCT_MODEL := Lenovo Z5s
 
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
+TARGET_FACE_UNLOCK_SUPPORT := YES
+PRODUCT_BOARD_PLATFORM := sdm845
+PRODUCT_USES_QCOM_HARDWARE := true
+
